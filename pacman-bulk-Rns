@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# Nordix tools
+# remove all of a groups of package in one command
+
+PACKAGE=$1
+
+G_CRYSTAL='\033[38;2;179;240;255m'
+G_CICE='\033[38;2;179;240;255m'
+RED='\033[0;31m'
+NC='\033[0m'
+
+
+HELP() {
+echo -e "${G_CICE}#======================================================#"
+echo -e "${G_CICE} #       *  ${G_CRYSTAL}Nordix Tools - pacman bulk remove${G_CICE} *       # "
+echo -e "${G_CICE}#======================================================#"
+echo ""
+echo -e "${G_CRYSTAL}Runs: pacman -Qq and pacman -Rns with confirmation ${G_CICE}"y/n""
+echo ""
+echo -e "${G_CRYSTAL}Usage: pacman-bulk-Rns ${G_CICE}[pkg search]"
+echo -e "${G_CRYSTAL}Example: pacman-bulk-Rns ${G_CICE}libreoffice"
+echo ""
+echo -e "${G_CICE}#======================================================#${NC}"
+
+}
+
+if [ -z "$PACKAGE" ]; then
+    HELP
+    exit 1
+fi
+
+pacman -Qq | grep "$PACKAGE" | xargs echo
+echo "Do you want to remove these packages? y/n"
+
+read answer && if [[ "$answer" == "y" || "$answer" == "Y" || "$answer" == "yes" || "$answer" == "YES" ]]; then pacman -Qq | grep "$PACKAGE" | xargs -r sudo pacman -Rns; fi
