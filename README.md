@@ -3,8 +3,6 @@
  > Search and remove all package that matches, with pree view and confirm y/n before remove
 
 ```Fish
-echo -e '\033[38;2;179;240;255m'
-
 pacman-bulk-Rns
 #======================================================#
  #       *  Nordix Tools - pacman bulk remove *       #
