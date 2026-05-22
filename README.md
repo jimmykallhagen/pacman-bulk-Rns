@@ -42,4 +42,4 @@ nordix-cli-zfs   1.0-1         -0.09 MiB
 Total Removed Size:  0.26 MiB
 
 :: Do you want to remove these packages? [Y/n]
-``
+```
