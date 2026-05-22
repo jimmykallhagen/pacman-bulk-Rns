@@ -1,6 +1,14 @@
 # Nordix pacman wrapper for bulk remove package
 
+**Part of:** [Nordix](https://github.com/jimmykallhagen/Nordix)  
+**Author:** Jimmy Källhagen  
+**License:** GPL-3.0-or-later
+
+---
+
  > Search and remove all package that matches, with pree view and confirm y/n before remove
+
+---
 
 ```Fish
 pacman-bulk-Rns
