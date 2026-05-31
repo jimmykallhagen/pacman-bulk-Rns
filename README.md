@@ -18,15 +18,15 @@ pacman-bulk-Rns
 
 Runs: pacman -Qq and pacman -Rns with confirmation y/n
 
-Usage: pacman-bulk-Rns [pkg search]
-Example: pacman-bulk-Rns libreoffice
+Usage: pacman-bulk-rns [pkg search]
+Example: pacman-bulk-rns libreoffice
 
 #======================================================#
 ```
 
 Example:
 ```Fish
-pacman-bulk-Rns hypr
+pacman-bulk-rns hypr
  hyprcursor-frozen hyprgraphics-frozen hypridle-frozen hyprland-frozen hyprland-guiutils-frozen hyprland-protocols-frozen hyprland-qt-support-frozen hyprlang-frozen hyprlock-frozen hyprpicker-frozen hyprpolkitagent-frozen hyprtoolkit-frozen hyprutils-frozen hyprwayland-scanner-frozen hyprwire-frozen nx-hyprinstall xdg-desktop-portal-hyprland-frozen
 
 Do you want to remove these packages? y/n
@@ -34,7 +34,7 @@ Do you want to remove these packages? y/n
 
 Example:
 ```Fish
-pacman-bulk-Rns nordix-cli
+ pacman-bulk-rns nordix-cli
  nordix-cli-arch nordix-cli-zfs
 
 Do you want to remove these packages? y/n
