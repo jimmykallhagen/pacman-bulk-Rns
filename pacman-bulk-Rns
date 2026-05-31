@@ -33,4 +33,4 @@ fi
 pacman -Qq | grep "$PACKAGE" | xargs echo
 echo "Do you want to remove these packages? y/n"
 
-read answer && if [[ "$answer" == "y" || "$answer" == "Y" || "$answer" == "yes" || "$answer" == "YES" ]]; then pacman -Qq | grep "$PACKAGE" | xargs -r sudo pacman -Rns; fi
+read answer && if [[ "$answer" == "y" || "$answer" == "Y" || "$answer" == "yes" || "$answer" == "YES" ]]; then pacman -Qq | grep "$PACKAGE" | xargs -r sudo pacman -Rns --noconfirm; fi
